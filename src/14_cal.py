@@ -31,16 +31,18 @@ import sys
 import calendar
 from datetime import datetime
 
-argv = sys.argv
-num_args = len(argv)
+args = sys.argv
 mon = datetime.now().month
 yr = datetime.now().year
 
-if num_args == 1:
-  calendar.TextCalendar(6).prmonth(yr, mon)
-elif num_args == 2:
-  calendar.TextCalendar(6).prmonth(yr, int(argv[1]))
-elif num_args == 3:
-  calendar.TextCalendar(6).prmonth(int(argv[2]), int(argv[1]))
+if len(args) == 1:
+  pass
+elif len(args) == 2:
+  mon = int(args[1])
+elif len(args) == 3:
+  yr = int(args[2])
+  mon = int(args[1])
 else:
   print("Please make sure it is in this format '14_cal.py [month] [year]'.")
+
+calendar.TextCalendar(6).prmonth(yr, mon)
