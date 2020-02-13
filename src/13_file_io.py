@@ -12,7 +12,6 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # YOUR CODE HERE
 with open('foo.txt', 'r') as file:
     print(file.read())
-file.close()
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
@@ -27,4 +26,3 @@ with open('bar.txt', 'w') as content:
 
 with open('bar.txt', 'r') as file:
     print(file.read())
-file.close()
