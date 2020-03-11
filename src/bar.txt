@@ -1,0 +1,3 @@
+The name of this file is bar.txt.
+This is a new file.
+Need to have 3 lines of text within this file.
