@@ -44,5 +44,10 @@ elif len(args) == 3:
   mon = int(args[1])
 else:
   print("Please make sure it is in this format '14_cal.py [month] [year]'.")
+  exit(0)
+
+if mon < 1 or mon > 12:
+  print("ERROR: Invalid month")
+  exit(0)
 
 calendar.TextCalendar(6).prmonth(yr, mon)
